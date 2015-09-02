@@ -18,7 +18,7 @@ import android.view.animation.ScaleAnimation;
 import android.widget.ListView;
 import android.widget.RelativeLayout;
 
-import com.weaver.teams.R;
+import com.tb.demo.utils.hangview.R;
 
 public class RippleView extends RelativeLayout {
 
