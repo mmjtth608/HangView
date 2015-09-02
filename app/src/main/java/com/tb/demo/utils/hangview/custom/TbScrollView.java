@@ -29,7 +29,7 @@ public class TbScrollView extends ScrollView {
 
     /**
      * 构造方法
-     * 
+     *
      * @param context
      */
     public TbScrollView(Context context) {
@@ -38,7 +38,7 @@ public class TbScrollView extends ScrollView {
 
     /**
      * 构造方法
-     * 
+     *
      * @param context
      * @param attrs
      */
@@ -48,7 +48,7 @@ public class TbScrollView extends ScrollView {
 
     /**
      * 构造方法
-     * 
+     *
      * @param context
      * @param attrs
      * @param defStyle
@@ -59,7 +59,7 @@ public class TbScrollView extends ScrollView {
 
     /**
      * 设置滚动接口
-     * 
+     *
      * @param onScrollListener
      */
     public void setOnScrollListener(OnScrollListener onScrollListener) {
