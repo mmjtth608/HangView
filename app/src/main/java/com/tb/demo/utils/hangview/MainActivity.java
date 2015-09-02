@@ -1,16 +1,34 @@
 package com.tb.demo.utils.hangview;
 
 import android.app.Activity;
+import android.content.res.TypedArray;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.view.ViewGroup;
 
-public class MainActivity extends Activity {
+import com.tb.demo.utils.hangview.custom.TbScrollView;
+
+public class MainActivity extends Activity implements
+        TbScrollView.OnScrollListener {
+    private ViewGroup bar;
+    private ViewGroup bar_fixed;
+    private ViewGroup bar_float;
+    private TbScrollView tbScrollView;
+    private float barTop;
+    private ViewGroup rl_bar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        bar = (ViewGroup) findViewById(R.id.bar);
+        bar_fixed = (ViewGroup) findViewById(R.id.bar_fixed);
+        bar_float = (ViewGroup) findViewById(R.id.bar_float);
+        rl_bar = (ViewGroup) findViewById(R.id.rl_bar);
+        tbScrollView = (TbScrollView) findViewById(R.id.myscrollview);
+        tbScrollView.setOnScrollListener(this);
     }
 
     @Override
@@ -25,5 +43,32 @@ public class MainActivity extends Activity {
         // automatically handle clicks on the Home/Up button, so long
         // as you specify a parent activity in AndroidManifest.xml.
         return super.onOptionsItemSelected(item);
+    }
+
+    @Override
+    public void onScroll(int scrollY) {
+        if (scrollY > barTop) {
+            if (bar.getParent() != bar_float) {
+                bar_fixed.removeView(bar);
+                bar_float.addView(bar);
+            }
+        } else {
+            if (bar.getParent() != bar_fixed) {
+                bar_float.removeView(bar);
+                bar_fixed.addView(bar);
+            }
+        }
+    }
+
+    @Override
+    public void onWindowFocusChanged(boolean hasFocus) {
+        super.onWindowFocusChanged(hasFocus);
+        if (hasFocus) {
+
+            TypedArray actionbarSizeTypedArray = obtainStyledAttributes(new int[] { android.R.attr.actionBarSize });
+            float actionbarSize = actionbarSizeTypedArray.getDimension(0, 0);
+
+            barTop = rl_bar.getTop() - actionbarSize;
+        }
     }
 }
