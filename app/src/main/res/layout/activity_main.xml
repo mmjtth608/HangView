@@ -3,49 +3,2253 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <LinearLayout
+    <com.tb.demo.utils.hangview.custom.TbScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical">
-
-        <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:src="@drawable/top_img" />
+        android:layout_height="match_parent">
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="?android:actionBarSize"
-            android:gravity="center"
-            android:orientation="horizontal">
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
 
-            <TextView
-                android:id="@+id/textView"
-                android:layout_width="wrap_content"
-                android:layout_height="?android:actionBarSize"
-                android:gravity="center_vertical|center_horizontal"
-                android:paddingLeft="15dp"
-                android:paddingRight="15dp"
-                android:text="主页" />
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scaleType="centerCrop"
+                android:src="@drawable/top_img" />
 
-            <TextView
-                android:id="@+id/textView2"
-                android:layout_width="wrap_content"
-                android:layout_height="?android:actionBarSize"
-                android:gravity="center_vertical|center_horizontal"
-                android:paddingLeft="15dp"
-                android:paddingRight="15dp"
-                android:text="微博" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:orientation="horizontal">
 
-            <TextView
-                android:id="@+id/textView3"
-                android:layout_width="wrap_content"
-                android:layout_height="?android:actionBarSize"
-                android:gravity="center_vertical|center_horizontal"
-                android:paddingLeft="15dp"
-                android:paddingRight="15dp"
-                android:text="相册" />
+                <com.tb.demo.utils.hangview.custom.RippleView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center">
+
+                    <TextView
+                        android:id="@+id/textView"
+                        android:layout_width="match_parent"
+                        android:layout_height="?android:actionBarSize"
+                        android:gravity="center"
+                        android:paddingLeft="19dp"
+                        android:paddingRight="19dp"
+                        android:text="主页" />
+
+                    <View
+                        android:id="@+id/view"
+                        android:layout_width="match_parent"
+                        android:layout_height="5dp"
+                        android:layout_below="@+id/textView"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginRight="15dp"
+                        android:background="@color/common_title_background"
+                        android:visibility="invisible" />
+                </com.tb.demo.utils.hangview.custom.RippleView>
+
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginTop="5dp"
+                    android:background="#FFC8C8C8" />
+
+                <com.tb.demo.utils.hangview.custom.RippleView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center">
+
+                    <TextView
+                        android:id="@+id/textView2"
+                        android:layout_width="match_parent"
+                        android:layout_height="?android:actionBarSize"
+                        android:gravity="center_vertical|center_horizontal"
+                        android:paddingLeft="19dp"
+                        android:paddingRight="19dp"
+                        android:text="微博"
+                        android:textColor="@color/common_title_background" />
+
+                    <View
+                        android:id="@+id/view2"
+                        android:layout_width="match_parent"
+                        android:layout_height="5dp"
+                        android:layout_below="@+id/textView2"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginRight="15dp"
+                        android:background="@color/common_title_background" />
+                </com.tb.demo.utils.hangview.custom.RippleView>
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginTop="5dp"
+                    android:background="#FFC8C8C8" />
+
+                <com.tb.demo.utils.hangview.custom.RippleView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center">
+
+                    <TextView
+                        android:id="@+id/textView3"
+                        android:layout_width="match_parent"
+                        android:layout_height="?android:actionBarSize"
+                        android:gravity="center_vertical|center_horizontal"
+                        android:paddingLeft="19dp"
+                        android:paddingRight="19dp"
+                        android:text="相册" />
+
+                    <View
+                        android:id="@+id/view3"
+                        android:layout_width="match_parent"
+                        android:layout_height="5dp"
+                        android:layout_below="@+id/textView3"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginRight="15dp"
+                        android:background="@color/common_title_background"
+                        android:visibility="invisible" />
+                </com.tb.demo.utils.hangview.custom.RippleView>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#FFC8C8C8" />
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:background="#e7e7e7">
+
+                <TextView
+                    android:id="@+id/editText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:padding="5dp"
+                    android:text="全部微博(132)" />
+
+                <TextView
+                    android:id="@+id/editText2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:gravity="center_vertical"
+                    android:padding="5dp"
+                    android:text="筛选"
+                    android:textColor="#0075a9" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#FFC8C8C8" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp">
+
+                    <ImageView
+                        android:layout_width="45dp"
+                        android:layout_height="45dp"
+                        android:layout_marginRight="10dp"
+                        android:scaleType="center"
+                        android:src="@drawable/top_img" />
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:gravity="center_vertical"
+                            android:text="不正常的天蝎座" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:gravity="center_vertical"
+                            android:text="8-29 来自iPhone 6"
+                            android:textColor="#FFC8C8C8" />
+                    </LinearLayout>
+
+                    <com.tb.demo.utils.hangview.custom.RippleView
+                        android:layout_width="42dp"
+                        android:layout_height="42dp"
+                        android:background="#e7e7e7">
+
+                        <LinearLayout
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_gravity="center"
+                            android:background="#ffffff"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center_horizontal"
+                                android:text="44" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center_horizontal"
+                                android:text="阅读"
+                                android:textColor="#FFC8C8C8" />
+                        </LinearLayout>
+                    </com.tb.demo.utils.hangview.custom.RippleView>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="10dp"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:text="我一直都自己赚钱自己花，活的逍遥自在，为了结婚而结婚才可悲！开了一句玩笑话被节目利用来炒作节目，我也不想，别整天来说的全世界就我一人爱钱 你们都是视钱财如粪土的圣人一样！" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#FFC8C8C8" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:layout_gravity="center_horizontal"
+                    android:orientation="horizontal">
+
+                    <com.tb.demo.utils.hangview.custom.RippleView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="?android:actionBarSize"
+                            android:gravity="center"
+                            android:paddingLeft="19dp"
+                            android:paddingRight="19dp"
+                            android:text="转发"
+                            android:textSize="10sp" />
+                    </com.tb.demo.utils.hangview.custom.RippleView>
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginTop="5dp"
+                        android:background="#FFC8C8C8" />
+
+                    <com.tb.demo.utils.hangview.custom.RippleView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="?android:actionBarSize"
+                            android:gravity="center_vertical|center_horizontal"
+                            android:paddingLeft="19dp"
+                            android:paddingRight="19dp"
+                            android:text="评论"
+                            android:textSize="10sp" />
+                    </com.tb.demo.utils.hangview.custom.RippleView>
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginTop="5dp"
+                        android:background="#FFC8C8C8" />
+
+                    <com.tb.demo.utils.hangview.custom.RippleView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="?android:actionBarSize"
+                            android:gravity="center_vertical|center_horizontal"
+                            android:paddingLeft="19dp"
+                            android:paddingRight="19dp"
+                            android:text="赞"
+                            android:textSize="10sp" />
+                    </com.tb.demo.utils.hangview.custom.RippleView>
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#FFC8C8C8" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp">
+
+                    <ImageView
+                        android:layout_width="45dp"
+                        android:layout_height="45dp"
+                        android:layout_marginRight="10dp"
+                        android:scaleType="center"
+                        android:src="@drawable/top_img" />
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:gravity="center_vertical"
+                            android:text="不正常的天蝎座" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:gravity="center_vertical"
+                            android:text="8-29 来自iPhone 6"
+                            android:textColor="#FFC8C8C8" />
+                    </LinearLayout>
+
+                    <com.tb.demo.utils.hangview.custom.RippleView
+                        android:layout_width="42dp"
+                        android:layout_height="42dp"
+                        android:background="#e7e7e7">
+
+                        <LinearLayout
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_gravity="center"
+                            android:background="#ffffff"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center_horizontal"
+                                android:text="124" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center_horizontal"
+                                android:text="阅读"
+                                android:textColor="#FFC8C8C8" />
+                        </LinearLayout>
+                    </com.tb.demo.utils.hangview.custom.RippleView>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="10dp"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:text="我一直都自己赚钱自己花，活的逍遥自在，为了结婚而结婚才可悲！开了一句玩笑话被节目利用来炒作节目，我也不想，别整天来说的全世界就我一人爱钱 你们都是视钱财如粪土的圣人一样！" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#FFC8C8C8" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:layout_gravity="center_horizontal"
+                    android:orientation="horizontal">
+
+                    <com.tb.demo.utils.hangview.custom.RippleView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="?android:actionBarSize"
+                            android:gravity="center"
+                            android:paddingLeft="19dp"
+                            android:paddingRight="19dp"
+                            android:text="转发"
+                            android:textSize="10sp" />
+                    </com.tb.demo.utils.hangview.custom.RippleView>
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginTop="5dp"
+                        android:background="#FFC8C8C8" />
+
+                    <com.tb.demo.utils.hangview.custom.RippleView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="?android:actionBarSize"
+                            android:gravity="center_vertical|center_horizontal"
+                            android:paddingLeft="19dp"
+                            android:paddingRight="19dp"
+                            android:text="评论"
+                            android:textSize="10sp" />
+                    </com.tb.demo.utils.hangview.custom.RippleView>
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginTop="5dp"
+                        android:background="#FFC8C8C8" />
+
+                    <com.tb.demo.utils.hangview.custom.RippleView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="?android:actionBarSize"
+                            android:gravity="center_vertical|center_horizontal"
+                            android:paddingLeft="19dp"
+                            android:paddingRight="19dp"
+                            android:text="赞"
+                            android:textSize="10sp" />
+                    </com.tb.demo.utils.hangview.custom.RippleView>
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#FFC8C8C8" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp">
+
+                    <ImageView
+                        android:layout_width="45dp"
+                        android:layout_height="45dp"
+                        android:layout_marginRight="10dp"
+                        android:scaleType="center"
+                        android:src="@drawable/top_img" />
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:gravity="center_vertical"
+                            android:text="不正常的天蝎座" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:gravity="center_vertical"
+                            android:text="8-29 来自iPhone 6"
+                            android:textColor="#FFC8C8C8" />
+                    </LinearLayout>
+
+                    <com.tb.demo.utils.hangview.custom.RippleView
+                        android:layout_width="42dp"
+                        android:layout_height="42dp"
+                        android:background="#e7e7e7">
+
+                        <LinearLayout
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_gravity="center"
+                            android:background="#ffffff"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center_horizontal"
+                                android:text="44" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center_horizontal"
+                                android:text="阅读"
+                                android:textColor="#FFC8C8C8" />
+                        </LinearLayout>
+                    </com.tb.demo.utils.hangview.custom.RippleView>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="10dp"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:text="我一直都自己赚钱自己花，活的逍遥自在，为了结婚而结婚才可悲！开了一句玩笑话被节目利用来炒作节目，我也不想，别整天来说的全世界就我一人爱钱 你们都是视钱财如粪土的圣人一样！" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#FFC8C8C8" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:layout_gravity="center_horizontal"
+                    android:orientation="horizontal">
+
+                    <com.tb.demo.utils.hangview.custom.RippleView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="?android:actionBarSize"
+                            android:gravity="center"
+                            android:paddingLeft="19dp"
+                            android:paddingRight="19dp"
+                            android:text="转发"
+                            android:textSize="10sp" />
+                    </com.tb.demo.utils.hangview.custom.RippleView>
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginTop="5dp"
+                        android:background="#FFC8C8C8" />
+
+                    <com.tb.demo.utils.hangview.custom.RippleView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="?android:actionBarSize"
+                            android:gravity="center_vertical|center_horizontal"
+                            android:paddingLeft="19dp"
+                            android:paddingRight="19dp"
+                            android:text="评论"
+                            android:textSize="10sp" />
+                    </com.tb.demo.utils.hangview.custom.RippleView>
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginTop="5dp"
+                        android:background="#FFC8C8C8" />
+
+                    <com.tb.demo.utils.hangview.custom.RippleView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="?android:actionBarSize"
+                            android:gravity="center_vertical|center_horizontal"
+                            android:paddingLeft="19dp"
+                            android:paddingRight="19dp"
+                            android:text="赞"
+                            android:textSize="10sp" />
+                    </com.tb.demo.utils.hangview.custom.RippleView>
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#FFC8C8C8" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp">
+
+                    <ImageView
+                        android:layout_width="45dp"
+                        android:layout_height="45dp"
+                        android:layout_marginRight="10dp"
+                        android:scaleType="center"
+                        android:src="@drawable/top_img" />
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:gravity="center_vertical"
+                            android:text="不正常的天蝎座" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:gravity="center_vertical"
+                            android:text="8-29 来自iPhone 6"
+                            android:textColor="#FFC8C8C8" />
+                    </LinearLayout>
+
+                    <com.tb.demo.utils.hangview.custom.RippleView
+                        android:layout_width="42dp"
+                        android:layout_height="42dp"
+                        android:background="#e7e7e7">
+
+                        <LinearLayout
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_gravity="center"
+                            android:background="#ffffff"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center_horizontal"
+                                android:text="44" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center_horizontal"
+                                android:text="阅读"
+                                android:textColor="#FFC8C8C8" />
+                        </LinearLayout>
+                    </com.tb.demo.utils.hangview.custom.RippleView>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="10dp"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:text="我一直都自己赚钱自己花，活的逍遥自在，为了结婚而结婚才可悲！开了一句玩笑话被节目利用来炒作节目，我也不想，别整天来说的全世界就我一人爱钱 你们都是视钱财如粪土的圣人一样！" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#FFC8C8C8" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:layout_gravity="center_horizontal"
+                    android:orientation="horizontal">
+
+                    <com.tb.demo.utils.hangview.custom.RippleView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="?android:actionBarSize"
+                            android:gravity="center"
+                            android:paddingLeft="19dp"
+                            android:paddingRight="19dp"
+                            android:text="转发"
+                            android:textSize="10sp" />
+                    </com.tb.demo.utils.hangview.custom.RippleView>
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginTop="5dp"
+                        android:background="#FFC8C8C8" />
+
+                    <com.tb.demo.utils.hangview.custom.RippleView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="?android:actionBarSize"
+                            android:gravity="center_vertical|center_horizontal"
+                            android:paddingLeft="19dp"
+                            android:paddingRight="19dp"
+                            android:text="评论"
+                            android:textSize="10sp" />
+                    </com.tb.demo.utils.hangview.custom.RippleView>
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginTop="5dp"
+                        android:background="#FFC8C8C8" />
+
+                    <com.tb.demo.utils.hangview.custom.RippleView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="?android:actionBarSize"
+                            android:gravity="center_vertical|center_horizontal"
+                            android:paddingLeft="19dp"
+                            android:paddingRight="19dp"
+                            android:text="赞"
+                            android:textSize="10sp" />
+                    </com.tb.demo.utils.hangview.custom.RippleView>
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#FFC8C8C8" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp">
+
+                    <ImageView
+                        android:layout_width="45dp"
+                        android:layout_height="45dp"
+                        android:layout_marginRight="10dp"
+                        android:scaleType="center"
+                        android:src="@drawable/top_img" />
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:gravity="center_vertical"
+                            android:text="不正常的天蝎座" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:gravity="center_vertical"
+                            android:text="8-29 来自iPhone 6"
+                            android:textColor="#FFC8C8C8" />
+                    </LinearLayout>
+
+                    <com.tb.demo.utils.hangview.custom.RippleView
+                        android:layout_width="42dp"
+                        android:layout_height="42dp"
+                        android:background="#e7e7e7">
+
+                        <LinearLayout
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_gravity="center"
+                            android:background="#ffffff"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center_horizontal"
+                                android:text="44" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center_horizontal"
+                                android:text="阅读"
+                                android:textColor="#FFC8C8C8" />
+                        </LinearLayout>
+                    </com.tb.demo.utils.hangview.custom.RippleView>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="10dp"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:text="我一直都自己赚钱自己花，活的逍遥自在，为了结婚而结婚才可悲！开了一句玩笑话被节目利用来炒作节目，我也不想，别整天来说的全世界就我一人爱钱 你们都是视钱财如粪土的圣人一样！" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#FFC8C8C8" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:layout_gravity="center_horizontal"
+                    android:orientation="horizontal">
+
+                    <com.tb.demo.utils.hangview.custom.RippleView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="?android:actionBarSize"
+                            android:gravity="center"
+                            android:paddingLeft="19dp"
+                            android:paddingRight="19dp"
+                            android:text="转发"
+                            android:textSize="10sp" />
+                    </com.tb.demo.utils.hangview.custom.RippleView>
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginTop="5dp"
+                        android:background="#FFC8C8C8" />
+
+                    <com.tb.demo.utils.hangview.custom.RippleView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="?android:actionBarSize"
+                            android:gravity="center_vertical|center_horizontal"
+                            android:paddingLeft="19dp"
+                            android:paddingRight="19dp"
+                            android:text="评论"
+                            android:textSize="10sp" />
+                    </com.tb.demo.utils.hangview.custom.RippleView>
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginTop="5dp"
+                        android:background="#FFC8C8C8" />
+
+                    <com.tb.demo.utils.hangview.custom.RippleView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="?android:actionBarSize"
+                            android:gravity="center_vertical|center_horizontal"
+                            android:paddingLeft="19dp"
+                            android:paddingRight="19dp"
+                            android:text="赞"
+                            android:textSize="10sp" />
+                    </com.tb.demo.utils.hangview.custom.RippleView>
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#FFC8C8C8" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp">
+
+                    <ImageView
+                        android:layout_width="45dp"
+                        android:layout_height="45dp"
+                        android:layout_marginRight="10dp"
+                        android:scaleType="center"
+                        android:src="@drawable/top_img" />
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:gravity="center_vertical"
+                            android:text="不正常的天蝎座" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:gravity="center_vertical"
+                            android:text="8-29 来自iPhone 6"
+                            android:textColor="#FFC8C8C8" />
+                    </LinearLayout>
+
+                    <com.tb.demo.utils.hangview.custom.RippleView
+                        android:layout_width="42dp"
+                        android:layout_height="42dp"
+                        android:background="#e7e7e7">
+
+                        <LinearLayout
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_gravity="center"
+                            android:background="#ffffff"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center_horizontal"
+                                android:text="44" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center_horizontal"
+                                android:text="阅读"
+                                android:textColor="#FFC8C8C8" />
+                        </LinearLayout>
+                    </com.tb.demo.utils.hangview.custom.RippleView>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="10dp"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:text="我一直都自己赚钱自己花，活的逍遥自在，为了结婚而结婚才可悲！开了一句玩笑话被节目利用来炒作节目，我也不想，别整天来说的全世界就我一人爱钱 你们都是视钱财如粪土的圣人一样！" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#FFC8C8C8" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:layout_gravity="center_horizontal"
+                    android:orientation="horizontal">
+
+                    <com.tb.demo.utils.hangview.custom.RippleView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="?android:actionBarSize"
+                            android:gravity="center"
+                            android:paddingLeft="19dp"
+                            android:paddingRight="19dp"
+                            android:text="转发"
+                            android:textSize="10sp" />
+                    </com.tb.demo.utils.hangview.custom.RippleView>
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginTop="5dp"
+                        android:background="#FFC8C8C8" />
+
+                    <com.tb.demo.utils.hangview.custom.RippleView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="?android:actionBarSize"
+                            android:gravity="center_vertical|center_horizontal"
+                            android:paddingLeft="19dp"
+                            android:paddingRight="19dp"
+                            android:text="评论"
+                            android:textSize="10sp" />
+                    </com.tb.demo.utils.hangview.custom.RippleView>
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginTop="5dp"
+                        android:background="#FFC8C8C8" />
+
+                    <com.tb.demo.utils.hangview.custom.RippleView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="?android:actionBarSize"
+                            android:gravity="center_vertical|center_horizontal"
+                            android:paddingLeft="19dp"
+                            android:paddingRight="19dp"
+                            android:text="赞"
+                            android:textSize="10sp" />
+                    </com.tb.demo.utils.hangview.custom.RippleView>
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#FFC8C8C8" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp">
+
+                    <ImageView
+                        android:layout_width="45dp"
+                        android:layout_height="45dp"
+                        android:layout_marginRight="10dp"
+                        android:scaleType="center"
+                        android:src="@drawable/top_img" />
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:gravity="center_vertical"
+                            android:text="不正常的天蝎座" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:gravity="center_vertical"
+                            android:text="8-29 来自iPhone 6"
+                            android:textColor="#FFC8C8C8" />
+                    </LinearLayout>
+
+                    <com.tb.demo.utils.hangview.custom.RippleView
+                        android:layout_width="42dp"
+                        android:layout_height="42dp"
+                        android:background="#e7e7e7">
+
+                        <LinearLayout
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_gravity="center"
+                            android:background="#ffffff"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center_horizontal"
+                                android:text="44" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center_horizontal"
+                                android:text="阅读"
+                                android:textColor="#FFC8C8C8" />
+                        </LinearLayout>
+                    </com.tb.demo.utils.hangview.custom.RippleView>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="10dp"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:text="我一直都自己赚钱自己花，活的逍遥自在，为了结婚而结婚才可悲！开了一句玩笑话被节目利用来炒作节目，我也不想，别整天来说的全世界就我一人爱钱 你们都是视钱财如粪土的圣人一样！" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#FFC8C8C8" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:layout_gravity="center_horizontal"
+                    android:orientation="horizontal">
+
+                    <com.tb.demo.utils.hangview.custom.RippleView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="?android:actionBarSize"
+                            android:gravity="center"
+                            android:paddingLeft="19dp"
+                            android:paddingRight="19dp"
+                            android:text="转发"
+                            android:textSize="10sp" />
+                    </com.tb.demo.utils.hangview.custom.RippleView>
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginTop="5dp"
+                        android:background="#FFC8C8C8" />
+
+                    <com.tb.demo.utils.hangview.custom.RippleView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="?android:actionBarSize"
+                            android:gravity="center_vertical|center_horizontal"
+                            android:paddingLeft="19dp"
+                            android:paddingRight="19dp"
+                            android:text="评论"
+                            android:textSize="10sp" />
+                    </com.tb.demo.utils.hangview.custom.RippleView>
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginTop="5dp"
+                        android:background="#FFC8C8C8" />
+
+                    <com.tb.demo.utils.hangview.custom.RippleView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="?android:actionBarSize"
+                            android:gravity="center_vertical|center_horizontal"
+                            android:paddingLeft="19dp"
+                            android:paddingRight="19dp"
+                            android:text="赞"
+                            android:textSize="10sp" />
+                    </com.tb.demo.utils.hangview.custom.RippleView>
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#FFC8C8C8" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp">
+
+                    <ImageView
+                        android:layout_width="45dp"
+                        android:layout_height="45dp"
+                        android:layout_marginRight="10dp"
+                        android:scaleType="center"
+                        android:src="@drawable/top_img" />
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:gravity="center_vertical"
+                            android:text="不正常的天蝎座" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:gravity="center_vertical"
+                            android:text="8-29 来自iPhone 6"
+                            android:textColor="#FFC8C8C8" />
+                    </LinearLayout>
+
+                    <com.tb.demo.utils.hangview.custom.RippleView
+                        android:layout_width="42dp"
+                        android:layout_height="42dp"
+                        android:background="#e7e7e7">
+
+                        <LinearLayout
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_gravity="center"
+                            android:background="#ffffff"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center_horizontal"
+                                android:text="44" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center_horizontal"
+                                android:text="阅读"
+                                android:textColor="#FFC8C8C8" />
+                        </LinearLayout>
+                    </com.tb.demo.utils.hangview.custom.RippleView>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="10dp"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:text="我一直都自己赚钱自己花，活的逍遥自在，为了结婚而结婚才可悲！开了一句玩笑话被节目利用来炒作节目，我也不想，别整天来说的全世界就我一人爱钱 你们都是视钱财如粪土的圣人一样！" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#FFC8C8C8" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:layout_gravity="center_horizontal"
+                    android:orientation="horizontal">
+
+                    <com.tb.demo.utils.hangview.custom.RippleView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="?android:actionBarSize"
+                            android:gravity="center"
+                            android:paddingLeft="19dp"
+                            android:paddingRight="19dp"
+                            android:text="转发"
+                            android:textSize="10sp" />
+                    </com.tb.demo.utils.hangview.custom.RippleView>
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginTop="5dp"
+                        android:background="#FFC8C8C8" />
+
+                    <com.tb.demo.utils.hangview.custom.RippleView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="?android:actionBarSize"
+                            android:gravity="center_vertical|center_horizontal"
+                            android:paddingLeft="19dp"
+                            android:paddingRight="19dp"
+                            android:text="评论"
+                            android:textSize="10sp" />
+                    </com.tb.demo.utils.hangview.custom.RippleView>
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginTop="5dp"
+                        android:background="#FFC8C8C8" />
+
+                    <com.tb.demo.utils.hangview.custom.RippleView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="?android:actionBarSize"
+                            android:gravity="center_vertical|center_horizontal"
+                            android:paddingLeft="19dp"
+                            android:paddingRight="19dp"
+                            android:text="赞"
+                            android:textSize="10sp" />
+                    </com.tb.demo.utils.hangview.custom.RippleView>
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#FFC8C8C8" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp">
+
+                    <ImageView
+                        android:layout_width="45dp"
+                        android:layout_height="45dp"
+                        android:layout_marginRight="10dp"
+                        android:scaleType="center"
+                        android:src="@drawable/top_img" />
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:gravity="center_vertical"
+                            android:text="不正常的天蝎座" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:gravity="center_vertical"
+                            android:text="8-29 来自iPhone 6"
+                            android:textColor="#FFC8C8C8" />
+                    </LinearLayout>
+
+                    <com.tb.demo.utils.hangview.custom.RippleView
+                        android:layout_width="42dp"
+                        android:layout_height="42dp"
+                        android:background="#e7e7e7">
+
+                        <LinearLayout
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_gravity="center"
+                            android:background="#ffffff"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center_horizontal"
+                                android:text="44" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center_horizontal"
+                                android:text="阅读"
+                                android:textColor="#FFC8C8C8" />
+                        </LinearLayout>
+                    </com.tb.demo.utils.hangview.custom.RippleView>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="10dp"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:text="我一直都自己赚钱自己花，活的逍遥自在，为了结婚而结婚才可悲！开了一句玩笑话被节目利用来炒作节目，我也不想，别整天来说的全世界就我一人爱钱 你们都是视钱财如粪土的圣人一样！" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#FFC8C8C8" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:layout_gravity="center_horizontal"
+                    android:orientation="horizontal">
+
+                    <com.tb.demo.utils.hangview.custom.RippleView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="?android:actionBarSize"
+                            android:gravity="center"
+                            android:paddingLeft="19dp"
+                            android:paddingRight="19dp"
+                            android:text="转发"
+                            android:textSize="10sp" />
+                    </com.tb.demo.utils.hangview.custom.RippleView>
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginTop="5dp"
+                        android:background="#FFC8C8C8" />
+
+                    <com.tb.demo.utils.hangview.custom.RippleView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="?android:actionBarSize"
+                            android:gravity="center_vertical|center_horizontal"
+                            android:paddingLeft="19dp"
+                            android:paddingRight="19dp"
+                            android:text="评论"
+                            android:textSize="10sp" />
+                    </com.tb.demo.utils.hangview.custom.RippleView>
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginTop="5dp"
+                        android:background="#FFC8C8C8" />
+
+                    <com.tb.demo.utils.hangview.custom.RippleView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="?android:actionBarSize"
+                            android:gravity="center_vertical|center_horizontal"
+                            android:paddingLeft="19dp"
+                            android:paddingRight="19dp"
+                            android:text="赞"
+                            android:textSize="10sp" />
+                    </com.tb.demo.utils.hangview.custom.RippleView>
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#FFC8C8C8" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp">
+
+                    <ImageView
+                        android:layout_width="45dp"
+                        android:layout_height="45dp"
+                        android:layout_marginRight="10dp"
+                        android:scaleType="center"
+                        android:src="@drawable/top_img" />
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:gravity="center_vertical"
+                            android:text="不正常的天蝎座" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:gravity="center_vertical"
+                            android:text="8-29 来自iPhone 6"
+                            android:textColor="#FFC8C8C8" />
+                    </LinearLayout>
+
+                    <com.tb.demo.utils.hangview.custom.RippleView
+                        android:layout_width="42dp"
+                        android:layout_height="42dp"
+                        android:background="#e7e7e7">
+
+                        <LinearLayout
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_gravity="center"
+                            android:background="#ffffff"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center_horizontal"
+                                android:text="44" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center_horizontal"
+                                android:text="阅读"
+                                android:textColor="#FFC8C8C8" />
+                        </LinearLayout>
+                    </com.tb.demo.utils.hangview.custom.RippleView>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="10dp"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:text="我一直都自己赚钱自己花，活的逍遥自在，为了结婚而结婚才可悲！开了一句玩笑话被节目利用来炒作节目，我也不想，别整天来说的全世界就我一人爱钱 你们都是视钱财如粪土的圣人一样！" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#FFC8C8C8" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:layout_gravity="center_horizontal"
+                    android:orientation="horizontal">
+
+                    <com.tb.demo.utils.hangview.custom.RippleView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="?android:actionBarSize"
+                            android:gravity="center"
+                            android:paddingLeft="19dp"
+                            android:paddingRight="19dp"
+                            android:text="转发"
+                            android:textSize="10sp" />
+                    </com.tb.demo.utils.hangview.custom.RippleView>
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginTop="5dp"
+                        android:background="#FFC8C8C8" />
+
+                    <com.tb.demo.utils.hangview.custom.RippleView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="?android:actionBarSize"
+                            android:gravity="center_vertical|center_horizontal"
+                            android:paddingLeft="19dp"
+                            android:paddingRight="19dp"
+                            android:text="评论"
+                            android:textSize="10sp" />
+                    </com.tb.demo.utils.hangview.custom.RippleView>
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginTop="5dp"
+                        android:background="#FFC8C8C8" />
+
+                    <com.tb.demo.utils.hangview.custom.RippleView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="?android:actionBarSize"
+                            android:gravity="center_vertical|center_horizontal"
+                            android:paddingLeft="19dp"
+                            android:paddingRight="19dp"
+                            android:text="赞"
+                            android:textSize="10sp" />
+                    </com.tb.demo.utils.hangview.custom.RippleView>
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#FFC8C8C8" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp">
+
+                    <ImageView
+                        android:layout_width="45dp"
+                        android:layout_height="45dp"
+                        android:layout_marginRight="10dp"
+                        android:scaleType="center"
+                        android:src="@drawable/top_img" />
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:gravity="center_vertical"
+                            android:text="不正常的天蝎座" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:gravity="center_vertical"
+                            android:text="8-29 来自iPhone 6"
+                            android:textColor="#FFC8C8C8" />
+                    </LinearLayout>
+
+                    <com.tb.demo.utils.hangview.custom.RippleView
+                        android:layout_width="42dp"
+                        android:layout_height="42dp"
+                        android:background="#e7e7e7">
+
+                        <LinearLayout
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_gravity="center"
+                            android:background="#ffffff"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center_horizontal"
+                                android:text="44" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center_horizontal"
+                                android:text="阅读"
+                                android:textColor="#FFC8C8C8" />
+                        </LinearLayout>
+                    </com.tb.demo.utils.hangview.custom.RippleView>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="10dp"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:text="我一直都自己赚钱自己花，活的逍遥自在，为了结婚而结婚才可悲！开了一句玩笑话被节目利用来炒作节目，我也不想，别整天来说的全世界就我一人爱钱 你们都是视钱财如粪土的圣人一样！" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#FFC8C8C8" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:layout_gravity="center_horizontal"
+                    android:orientation="horizontal">
+
+                    <com.tb.demo.utils.hangview.custom.RippleView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="?android:actionBarSize"
+                            android:gravity="center"
+                            android:paddingLeft="19dp"
+                            android:paddingRight="19dp"
+                            android:text="转发"
+                            android:textSize="10sp" />
+                    </com.tb.demo.utils.hangview.custom.RippleView>
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginTop="5dp"
+                        android:background="#FFC8C8C8" />
+
+                    <com.tb.demo.utils.hangview.custom.RippleView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="?android:actionBarSize"
+                            android:gravity="center_vertical|center_horizontal"
+                            android:paddingLeft="19dp"
+                            android:paddingRight="19dp"
+                            android:text="评论"
+                            android:textSize="10sp" />
+                    </com.tb.demo.utils.hangview.custom.RippleView>
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginTop="5dp"
+                        android:background="#FFC8C8C8" />
+
+                    <com.tb.demo.utils.hangview.custom.RippleView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="?android:actionBarSize"
+                            android:gravity="center_vertical|center_horizontal"
+                            android:paddingLeft="19dp"
+                            android:paddingRight="19dp"
+                            android:text="赞"
+                            android:textSize="10sp" />
+                    </com.tb.demo.utils.hangview.custom.RippleView>
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#FFC8C8C8" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp">
+
+                    <ImageView
+                        android:layout_width="45dp"
+                        android:layout_height="45dp"
+                        android:layout_marginRight="10dp"
+                        android:scaleType="center"
+                        android:src="@drawable/top_img" />
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:gravity="center_vertical"
+                            android:text="不正常的天蝎座" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:gravity="center_vertical"
+                            android:text="8-29 来自iPhone 6"
+                            android:textColor="#FFC8C8C8" />
+                    </LinearLayout>
+
+                    <com.tb.demo.utils.hangview.custom.RippleView
+                        android:layout_width="42dp"
+                        android:layout_height="42dp"
+                        android:background="#e7e7e7">
+
+                        <LinearLayout
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_gravity="center"
+                            android:background="#ffffff"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center_horizontal"
+                                android:text="44" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center_horizontal"
+                                android:text="阅读"
+                                android:textColor="#FFC8C8C8" />
+                        </LinearLayout>
+                    </com.tb.demo.utils.hangview.custom.RippleView>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="10dp"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:text="我一直都自己赚钱自己花，活的逍遥自在，为了结婚而结婚才可悲！开了一句玩笑话被节目利用来炒作节目，我也不想，别整天来说的全世界就我一人爱钱 你们都是视钱财如粪土的圣人一样！" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#FFC8C8C8" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:layout_gravity="center_horizontal"
+                    android:orientation="horizontal">
+
+                    <com.tb.demo.utils.hangview.custom.RippleView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="?android:actionBarSize"
+                            android:gravity="center"
+                            android:paddingLeft="19dp"
+                            android:paddingRight="19dp"
+                            android:text="转发"
+                            android:textSize="10sp" />
+                    </com.tb.demo.utils.hangview.custom.RippleView>
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginTop="5dp"
+                        android:background="#FFC8C8C8" />
+
+                    <com.tb.demo.utils.hangview.custom.RippleView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="?android:actionBarSize"
+                            android:gravity="center_vertical|center_horizontal"
+                            android:paddingLeft="19dp"
+                            android:paddingRight="19dp"
+                            android:text="评论"
+                            android:textSize="10sp" />
+                    </com.tb.demo.utils.hangview.custom.RippleView>
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginTop="5dp"
+                        android:background="#FFC8C8C8" />
+
+                    <com.tb.demo.utils.hangview.custom.RippleView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="?android:actionBarSize"
+                            android:gravity="center_vertical|center_horizontal"
+                            android:paddingLeft="19dp"
+                            android:paddingRight="19dp"
+                            android:text="赞"
+                            android:textSize="10sp" />
+                    </com.tb.demo.utils.hangview.custom.RippleView>
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#FFC8C8C8" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp">
+
+                    <ImageView
+                        android:layout_width="45dp"
+                        android:layout_height="45dp"
+                        android:layout_marginRight="10dp"
+                        android:scaleType="center"
+                        android:src="@drawable/top_img" />
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:gravity="center_vertical"
+                            android:text="不正常的天蝎座" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:gravity="center_vertical"
+                            android:text="8-29 来自iPhone 6"
+                            android:textColor="#FFC8C8C8" />
+                    </LinearLayout>
+
+                    <com.tb.demo.utils.hangview.custom.RippleView
+                        android:layout_width="42dp"
+                        android:layout_height="42dp"
+                        android:background="#e7e7e7">
+
+                        <LinearLayout
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_gravity="center"
+                            android:background="#ffffff"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center_horizontal"
+                                android:text="44" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center_horizontal"
+                                android:text="阅读"
+                                android:textColor="#FFC8C8C8" />
+                        </LinearLayout>
+                    </com.tb.demo.utils.hangview.custom.RippleView>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="10dp"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:text="我一直都自己赚钱自己花，活的逍遥自在，为了结婚而结婚才可悲！开了一句玩笑话被节目利用来炒作节目，我也不想，别整天来说的全世界就我一人爱钱 你们都是视钱财如粪土的圣人一样！" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#FFC8C8C8" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:layout_gravity="center_horizontal"
+                    android:orientation="horizontal">
+
+                    <com.tb.demo.utils.hangview.custom.RippleView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="?android:actionBarSize"
+                            android:gravity="center"
+                            android:paddingLeft="19dp"
+                            android:paddingRight="19dp"
+                            android:text="转发"
+                            android:textSize="10sp" />
+                    </com.tb.demo.utils.hangview.custom.RippleView>
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginTop="5dp"
+                        android:background="#FFC8C8C8" />
+
+                    <com.tb.demo.utils.hangview.custom.RippleView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="?android:actionBarSize"
+                            android:gravity="center_vertical|center_horizontal"
+                            android:paddingLeft="19dp"
+                            android:paddingRight="19dp"
+                            android:text="评论"
+                            android:textSize="10sp" />
+                    </com.tb.demo.utils.hangview.custom.RippleView>
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginTop="5dp"
+                        android:background="#FFC8C8C8" />
+
+                    <com.tb.demo.utils.hangview.custom.RippleView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="?android:actionBarSize"
+                            android:gravity="center_vertical|center_horizontal"
+                            android:paddingLeft="19dp"
+                            android:paddingRight="19dp"
+                            android:text="赞"
+                            android:textSize="10sp" />
+                    </com.tb.demo.utils.hangview.custom.RippleView>
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="#FFC8C8C8" />
+            </LinearLayout>
 
         </LinearLayout>
-    </LinearLayout>
+    </com.tb.demo.utils.hangview.custom.TbScrollView>
+
 </LinearLayout>
