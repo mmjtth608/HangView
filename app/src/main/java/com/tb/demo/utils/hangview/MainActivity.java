@@ -7,11 +7,13 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 
 import com.tb.demo.utils.hangview.custom.TbScrollView;
 
 public class MainActivity extends Activity implements
         TbScrollView.OnScrollListener {
+    private ImageView top_img;
     private ViewGroup bar;
     private ViewGroup bar_fixed;
     private ViewGroup bar_float;
@@ -23,6 +25,7 @@ public class MainActivity extends Activity implements
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        top_img=(ImageView)findViewById(R.id.top_img);
         bar = (ViewGroup) findViewById(R.id.bar);
         bar_fixed = (ViewGroup) findViewById(R.id.bar_fixed);
         bar_float = (ViewGroup) findViewById(R.id.bar_float);
@@ -68,7 +71,7 @@ public class MainActivity extends Activity implements
             TypedArray actionbarSizeTypedArray = obtainStyledAttributes(new int[] { android.R.attr.actionBarSize });
             float actionbarSize = actionbarSizeTypedArray.getDimension(0, 0);
 
-            barTop = rl_bar.getTop() - actionbarSize;
+            barTop = top_img.getBottom();
         }
     }
 }
